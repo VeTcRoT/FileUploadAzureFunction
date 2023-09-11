@@ -38,7 +38,7 @@ namespace FileUploadTrigger
                     _configuration["Email:From"],
                     userEmail,
                     _configuration["Email:Subject"],
-                    $"Your file '{name}' has been uploaded successfully. You can access it here: <a href=\"{uri}\">Link</a>");
+                    $"Your file '{name}' has been uploaded successfully. You can access it here: <a href=\"{uri}\">Link</a>. <strong>This link will be available for 1 hour.</strong>");
 
                 var isSuccessStatusCode = await _emailSender.SendAsync(emailOptions);
 
